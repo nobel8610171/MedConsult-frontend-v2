@@ -1,17 +1,18 @@
 {
-  "files": {
-    "main.css": "/MedConsult-frontend-v2/static/css/main.11c6d017.css",
-    "main.js": "/MedConsult-frontend-v2/static/js/main.6b60ccb1.js",
-    "static/js/787.07d44435.chunk.js": "/MedConsult-frontend-v2/static/js/787.07d44435.chunk.js",
-    "static/media/chatgpt.png": "/MedConsult-frontend-v2/static/media/chatgpt.5e1132983dc3157fbd28.png",
-    "static/media/old.png": "/MedConsult-frontend-v2/static/media/old.2ee2f21366970aec7fbf.png",
-    "index.html": "/MedConsult-frontend-v2/index.html",
-    "main.11c6d017.css.map": "/MedConsult-frontend-v2/static/css/main.11c6d017.css.map",
-    "main.6b60ccb1.js.map": "/MedConsult-frontend-v2/static/js/main.6b60ccb1.js.map",
-    "787.07d44435.chunk.js.map": "/MedConsult-frontend-v2/static/js/787.07d44435.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.11c6d017.css",
-    "static/js/main.6b60ccb1.js"
-  ]
+  "main.css": "/MedConsult-frontend-v2/static/css/main.c6ca6942.chunk.css",
+  "main.js": "/MedConsult-frontend-v2/static/js/main.6be7f798.chunk.js",
+  "main.js.map": "/MedConsult-frontend-v2/static/js/main.6be7f798.chunk.js.map",
+  "static/js/1.676c8d3e.chunk.js": "/MedConsult-frontend-v2/static/js/1.676c8d3e.chunk.js",
+  "static/js/1.676c8d3e.chunk.js.map": "/MedConsult-frontend-v2/static/js/1.676c8d3e.chunk.js.map",
+  "static/js/2.17f68a15.chunk.js": "/MedConsult-frontend-v2/static/js/2.17f68a15.chunk.js",
+  "static/js/2.17f68a15.chunk.js.map": "/MedConsult-frontend-v2/static/js/2.17f68a15.chunk.js.map",
+  "runtime~main.js": "/MedConsult-frontend-v2/static/js/runtime~main.d8277811.js",
+  "runtime~main.js.map": "/MedConsult-frontend-v2/static/js/runtime~main.d8277811.js.map",
+  "static/media/browser.cjs": "/MedConsult-frontend-v2/static/media/browser.5ef5f772.cjs",
+  "static/media/old.png": "/MedConsult-frontend-v2/static/media/old.3258e6ca.png",
+  "static/media/chatgpt.png": "/MedConsult-frontend-v2/static/media/chatgpt.441f1ac2.png",
+  "static/css/main.c6ca6942.chunk.css.map": "/MedConsult-frontend-v2/static/css/main.c6ca6942.chunk.css.map",
+  "index.html": "/MedConsult-frontend-v2/index.html",
+  "precache-manifest.29a4351b9ebc7611dff61fef4bff8cfc.js": "/MedConsult-frontend-v2/precache-manifest.29a4351b9ebc7611dff61fef4bff8cfc.js",
+  "service-worker.js": "/MedConsult-frontend-v2/service-worker.js"
 }

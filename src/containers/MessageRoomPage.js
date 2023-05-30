@@ -11,7 +11,7 @@ import Loading from '../components/Loading';
 import ClinicSchedule from "../data/ClinicSchedule";
 import { enableButton, disableButton } from '../functions/Utils';
 
-const MessageRoomPage = ({apiKey, setApiKey, report}) => {
+const MessageRoomPage = ({apiKey, setApiKey, report, medicalRecord}) => {
 
     const [audios, setAudios] = useState([]);
     const [transcriptions, setTranscriptions] = useState([]);
@@ -31,6 +31,10 @@ const MessageRoomPage = ({apiKey, setApiKey, report}) => {
     const chatgptModel = "gpt-3.5-turbo";
     const urlForWhisper = "https://api.openai.com/v1/audio/transcriptions";
     const urlForChatgpt = "https://api.openai.com/v1/chat/completions";
+
+    useEffect(() => {
+        console.log(medicalRecord);
+    }, []);
 
     const sendAudioRequest = async function (blob) {      
         try{
@@ -98,8 +102,10 @@ const MessageRoomPage = ({apiKey, setApiKey, report}) => {
                 messages.push({"role": "assistant", "content": chats[i]});
             }
             messages.push({"role": "user", "content": transcription}); //due to useState, this transcription has not been appended to transcriptions yet at this moment
-            if (transcriptions.length == 0) // give report information to ChatGPT at first conversation
-                messages.push({"role": "assistant", "content": report});
+            if (transcriptions.length == 0) {// give report information to ChatGPT at first conversation
+                messages.push({"role": "assistant", "content": "report: " + report});
+                messages.push({"role": "assistant", "content": "medical record: " + medicalRecord})
+            }
 
             const jsonData = {messages: messages, model: chatgptModel}
             const response = await axios.post(urlForChatgpt, jsonData, {headers: headers} )
@@ -152,6 +158,8 @@ const MessageRoomPage = ({apiKey, setApiKey, report}) => {
                     {"role": "system", "content": "You are a medical summarization system, and a patient will share his or her current physical condition with you, and you will also receive a chest xray report. Typically, it includes the following four aspects: onset time, triggering factors of symptoms, nature of symptoms, and severity. Please utilize the information provided to summarize these aspects objectively without offering any advice."},
             ]
         
+        messages.push({"role": "user", "content": "patient's medical record:"});
+        messages.push({"role": "user", "content": medicalRecord});
         messages.push({"role": "user", "content": "patient's chest xray report:"});
         messages.push({"role": "user", "content": report});
         messages.push({"role": "user", "content": "patient's description:"})
